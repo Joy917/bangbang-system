@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url=jdbc:mysql://localhost:3306/bangbang?characterEncoding=UTF-8
+    username=root
+    password=666666
+    driver-class-name=com.mysql.jdbc.Driver
+
+spring:
+  jpa:
+    hibernate.ddl-auto=update;
+    show-sql=true
+
+#spring:
+#  jackson:
+#    serialization:
+#      indent-output=true
