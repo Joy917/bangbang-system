@@ -8,9 +8,9 @@
 
 # 注意事项：
 - 【强制】使用 idea 开发，并保持代码格式化一致，避免冲突
-	插件安装并启用：
-		- 代码格式插件:google-coding-style
-		- 自动保存插件:save action（Formatting actions栏需要全部勾选，General栏勾选最长一个）
+- 插件安装并启用：
+	1. 代码格式插件:google-coding-style
+	2. 自动保存插件:save action（Formatting actions栏需要全部勾选，General栏勾选最长一个）
 - 编码规范：
 	1. 【强制】POJO类属性不允许命名为is开头，一律用后缀Flag替换
 	2. 【强制】POJO类布尔属性使用基本类型 boolean，其余使用封装类型
