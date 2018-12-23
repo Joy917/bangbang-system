@@ -13,7 +13,8 @@ public class DemoServiceImp implements DemoService {
     private DemoDAO demoDAO;
 
     @Override
-    public void saveDemo(String name, Integer age) {
+    public String saveDemo(String name, Integer age) {
         demoDAO.saveDemo(name, age);
+        return "success saved!";
     }
 }

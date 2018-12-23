@@ -1,8 +1,11 @@
 package com.bangbang.baseframe.service;
 
+import org.springframework.stereotype.Component;
+
 import javax.transaction.Transactional;
 
 @Transactional
+@Component
 public interface DemoService {
-    void saveDemo(String name,Integer age);
+    String saveDemo(String name, Integer age);
 }
