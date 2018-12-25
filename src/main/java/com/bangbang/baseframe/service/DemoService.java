@@ -1,5 +1,7 @@
 package com.bangbang.baseframe.service;
 
+import com.bangbang.baseframe.model.ResponseResult;
+
 public interface DemoService {
-    String saveDemo(String name, Integer age);
+    ResponseResult saveDemo(String name, Integer age);
 }

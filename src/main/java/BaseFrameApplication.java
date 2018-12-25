@@ -12,9 +12,9 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableAutoConfiguration
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 @EnableJpaAuditing
-@EnableJpaRepositories(basePackages = {"com.bangbang.baseframe.dao"})
-@EntityScan(basePackages = {"com.bangbang.baseframe.entities"})
-@ComponentScan(basePackages = {"com.bangbang.baseframe"})
+@EnableJpaRepositories({"com.bangbang.baseframe.dao"})
+@EntityScan({"com.bangbang.baseframe.entities"})
+@ComponentScan({"com.bangbang.baseframe"})
 public class BaseFrameApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {

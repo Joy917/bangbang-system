@@ -1,5 +1,6 @@
 #Folders
-.mvn
+.mvn/
+.idea/
 
 # Compiled class file
 *.class
