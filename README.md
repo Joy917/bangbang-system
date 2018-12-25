@@ -7,7 +7,7 @@
 - MariaDB 10.2
 
 # 注意事项：
-- 【强制】使用 idea 开发，并保持代码格式化一致，避免冲突
+- 【强制】使用 idea 开发，并保持代码格式化一致，避免冲突，详见[IDEA详细配置](https://blog.csdn.net/qq_35221523/article/details/85239867)
 - 插件安装并启用：
 	1. 代码格式插件:google-coding-style
 	2. 自动保存插件:save action（Formatting actions栏需要全部勾选，General栏勾选最长一个）
