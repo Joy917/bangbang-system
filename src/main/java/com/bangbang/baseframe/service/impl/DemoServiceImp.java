@@ -1,6 +1,7 @@
 package com.bangbang.baseframe.service.impl;
 
 import com.bangbang.baseframe.dao.DemoDAO;
+import com.bangbang.baseframe.entities.DemoDO;
 import com.bangbang.baseframe.model.ResponseResult;
 import com.bangbang.baseframe.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,8 +21,11 @@ public class DemoServiceImp implements DemoService {
     private DemoDAO demoDAO;
 
     @Override
-    public ResponseResult saveDemo(String name, Integer age) {
-        demoDAO.saveDemo(name, age);
+    public ResponseResult saveDemo(String name, Integer num) {
+        DemoDO demoDO = new DemoDO();
+        demoDO.setSchoolName(name);
+        demoDO.setClassNum(num);
+        demoDAO.save(demoDO);
         return ResponseResult.success("save successed !!!");
     }
 }
