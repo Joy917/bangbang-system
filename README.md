@@ -1,10 +1,11 @@
 # base-frame
-棒棒论坛后台
+基于SpringBoot的完整后台框架，直接可用，便于快速开发项目
 
-# 框架：
+# 开发相关：
 - Spring Boot 2.x
 - Hibernate
 - MariaDB 10.2
+- JDK1.8
 
 # 注意事项：
 - 【强制】使用 idea 开发，并保持代码格式化一致，避免冲突，详见[IDEA详细配置](https://blog.csdn.net/qq_35221523/article/details/85239867)
