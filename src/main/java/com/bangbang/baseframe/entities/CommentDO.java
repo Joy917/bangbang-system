@@ -5,19 +5,19 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 /**
- * @Description
+ * @Description 评论实体类
  * @Author Loca
  * @Date 2018/12/28 0028 15:12
  **/
 @Entity
-@Table(name = "t_comment",schema = "bangbang")
+@Table(name = "comment", schema = "bangbang")
 public class CommentDO extends BaseDO{
 
     /**
-     * 评论从属 0-帖子 1-文章
+     * 评论从属 1-帖子 2-文章
      */
-    @Column(name = "from_type")
-    private String fromType;
+    @Column(name = "comment_type")
+    private String commentType;
 
     /**
      * 对应帖子、文章id
@@ -28,27 +28,27 @@ public class CommentDO extends BaseDO{
     /**
      * 评论者
      */
-    @Column(name = "author")
-    private String author;
+    @Column(name = "comment_from")
+    private String commentFrom;
 
     /**
      * 评论内容
      */
-    @Column(name = "content")
-    private String content;
+    @Column(name = "comment_content")
+    private String commentContent;
 
     /**
      * 已读状态 T-已读 F-未读
      */
-    @Column(name = "read_status")
-    private boolean readStatus;
+    @Column(name = "comment_status")
+    private boolean commentStatus;
 
-    public String getFromType() {
-        return fromType;
+    public String getCommentType() {
+        return commentType;
     }
 
-    public void setFromType(String fromType) {
-        this.fromType = fromType;
+    public void setCommentType(String commentType) {
+        this.commentType = commentType;
     }
 
     public Long getReferId() {
@@ -59,27 +59,27 @@ public class CommentDO extends BaseDO{
         this.referId = referId;
     }
 
-    public String getAuthor() {
-        return author;
+    public String getCommentFrom() {
+        return commentFrom;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setCommentFrom(String commentFrom) {
+        this.commentFrom = commentFrom;
     }
 
-    public String getContent() {
-        return content;
+    public String getCommentContent() {
+        return commentContent;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setCommentContent(String commentContent) {
+        this.commentContent = commentContent;
     }
 
-    public boolean isReadStatus() {
-        return readStatus;
+    public boolean isCommentStatus() {
+        return commentStatus;
     }
 
-    public void setReadStatus(boolean readStatus) {
-        this.readStatus = readStatus;
+    public void setCommentStatus(boolean commentStatus) {
+        this.commentStatus = commentStatus;
     }
 }

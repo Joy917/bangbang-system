@@ -10,7 +10,7 @@ import javax.persistence.Table;
  * @Date 2018/12/28 0028 11:31
  **/
 @Entity
-@Table(name = "t_forum",schema = "bangbang")
+@Table(name = "forum", schema = "bangbang")
 public class ForumDO extends BaseDO{
 
     /**
@@ -20,10 +20,10 @@ public class ForumDO extends BaseDO{
     private String forumName;
 
     /**
-     * 论坛拥有者（申请人）
+     * 论坛拥有者（申请人）关联Id，用户表
      */
-    @Column(name = "forum_owener")
-    private String forumOwner;
+    @Column(name = "forum_owner_id")
+    private Long forumOwnerId;
 
     /**
      * 论坛简介（申请原因）
@@ -57,12 +57,12 @@ public class ForumDO extends BaseDO{
         this.forumName = forumName;
     }
 
-    public String getForumOwner() {
-        return forumOwner;
+    public Long getForumOwnerId() {
+        return forumOwnerId;
     }
 
-    public void setForumOwner(String forumOwner) {
-        this.forumOwner = forumOwner;
+    public void setForumOwnerId(Long forumOwnerId) {
+        this.forumOwnerId = forumOwnerId;
     }
 
     public String getForumDescription() {

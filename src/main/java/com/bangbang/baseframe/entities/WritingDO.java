@@ -1,8 +1,5 @@
 package com.bangbang.baseframe.entities;
 
-import org.hibernate.annotations.Type;
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-
 import javax.persistence.*;
 
 /**
@@ -11,28 +8,26 @@ import javax.persistence.*;
  * @Date 2018/12/28 0028 14:34
  **/
 @MappedSuperclass
-@EntityListeners(value = {AuditingEntityListener.class})
 public class WritingDO extends BaseDO {
 
     /**
      * 标题
      */
     @Column(name = "title")
-    protected String title;
+    private String title;
 
     /**
      * 作者
      */
     @Column(name = "author")
-    protected String author;
+    private String author;
 
     /**
      * 内容
      */
-    @Lob
     @Basic(fetch = FetchType.LAZY)
-    @Column(length = 16777216)
-    protected String content;
+    @Column(name = "content", columnDefinition = "LongText")
+    private String content;
 
     /**
      * 点赞数

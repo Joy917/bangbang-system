@@ -10,34 +10,34 @@ import javax.persistence.Table;
  * @Date 2018/12/28 0028 15:07
  **/
 @Entity
-@Table(name = "t_article",schema = "bangbang")
+@Table(name = "article", schema = "bangbang")
 public class ArticleDO extends WritingDO {
 
     /**
      * 推荐评分
      */
-    @Column(name = "recommend_rank")
-    private Integer recommendRank;
+    @Column(name = "article_rank")
+    private Integer articleRank;
 
     /**
      * 申请审核状态
      */
-    @Column(name = "apply_status")
-    private Integer applyStatus;
+    @Column(name = "article_status")
+    private Integer articleStatus;
 
-    public Integer getRecommendRank() {
-        return recommendRank;
+    public Integer getArticleRank() {
+        return articleRank;
     }
 
-    public void setRecommendRank(Integer recommendRank) {
-        this.recommendRank = recommendRank;
+    public void setArticleRank(Integer articleRank) {
+        this.articleRank = articleRank;
     }
 
-    public Integer getApplyStatus() {
-        return applyStatus;
+    public Integer getArticleStatus() {
+        return articleStatus;
     }
 
-    public void setApplyStatus(Integer applyStatus) {
-        this.applyStatus = applyStatus;
+    public void setArticleStatus(Integer articleStatus) {
+        this.articleStatus = articleStatus;
     }
 }

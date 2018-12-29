@@ -10,7 +10,7 @@ import javax.persistence.Table;
  * @Date 2018/12/28 0028 15:31
  **/
 @Entity
-@Table(name = "t_goods",schema = "bangbang")
+@Table(name = "goods", schema = "bangbang")
 public class GoodsDO extends BaseDO{
 
     /**
@@ -22,8 +22,8 @@ public class GoodsDO extends BaseDO{
     /**
      * 兑换所需积分
      */
-    @Column(name = "exchange_points")
-    private String exchangePoints;
+    @Column(name = "goods_points")
+    private String goodsPoints;
 
     /**
      * 商品数量
@@ -32,10 +32,10 @@ public class GoodsDO extends BaseDO{
     private Long goodsNum;
 
     /**
-     * 商品展示图片
+     * 商品展示图片关联Id，图片表
      */
-    @Column(name = "picture")
-    private String picture;
+    @Column(name = "picture_id")
+    private Long pictureId;
 
     public String getGoodsName() {
         return goodsName;
@@ -45,12 +45,12 @@ public class GoodsDO extends BaseDO{
         this.goodsName = goodsName;
     }
 
-    public String getExchangePoints() {
-        return exchangePoints;
+    public String getGoodsPoints() {
+        return goodsPoints;
     }
 
-    public void setExchangePoints(String exchangePoints) {
-        this.exchangePoints = exchangePoints;
+    public void setGoodsPoints(String goodsPoints) {
+        this.goodsPoints = goodsPoints;
     }
 
     public Long getGoodsNum() {
@@ -61,11 +61,11 @@ public class GoodsDO extends BaseDO{
         this.goodsNum = goodsNum;
     }
 
-    public String getPicture() {
-        return picture;
+    public Long getPictureId() {
+        return pictureId;
     }
 
-    public void setPicture(String picture) {
-        this.picture = picture;
+    public void setPictureId(Long pictureId) {
+        this.pictureId = pictureId;
     }
 }
