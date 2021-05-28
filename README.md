@@ -1,5 +1,5 @@
 # bangbang-system
-棒棒团论坛系统
+论坛后台模板
 
 # 框架及开发：
 - Spring Boot 2.x
